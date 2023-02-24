@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login • Instagram</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://kit.fontawesome.com/e1e9fac77f.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="image/icon.png">
+</head>
+<body>
+    <div class="container">
+        <div class="main-container">
+            <div class="main-content">
+                <div class="slide-container">
+                    <div class="slide-content" id="slide-content">
+                        <img src="image/screenshot1.png" class="active" alt="screen-1">
+                        <img src="image/screenshot2.png" alt="screen-2">
+                        <img src="image/screenshot3.png" alt="screen-3">
+                        <img src="image/screenshot4.png" alt="screen-4">
+                    </div>
+                </div>
+                <div class="form-container">
+                    <div class="form-content box">
+                        <div class="logo">
+                            <img src="image/Instagram_logo.png" alt="logo img" class="logo-img">
+                        </div>
+                        <form class="login-form" id="login-form">
+                            <div class="form-group">
+                                <div class="login-input">
+                                    <input type="text" name="email"placeholder="Phone number,username, or email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="login-input">
+                                    <input type="password" name="password"placeholder="Password" required>
+                                </div>
+                            </div>
+                            <div class="btn-group">
+                                <button  class="login-btn" id="login-btn" type="submit"><a href="userpage.html">Log in</a></button>
+                            </div>
+                        </form>
+                        <div class="or">
+                            <hr>
+                            <span>OR</span>
+                            <hr>
+                        </div>
+                        <div class="fb-text">
+                            <a href="#"><i class="fa-brands fa-square-facebook fb"> </i> Login with Facebook</a>
+                            <p><a href="#">Forgot Password?</a></p>
+                        </div>
+                    </div>
+                    <div class="goto">
+                        <p>Don't have an account? <a href="signup.html" target="_self">Sign Up</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="links" id="link">
+                <a href="#">Meta</a>
+                <a href="#">About</a>
+                <a href="#">Blog</a>
+                <a href="#">Jobs</a>
+                <a href="#">Help</a>
+                <a href="#">API</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Top Accounts</a>
+                <a href="#">Hashtags</a>
+                <a href="#">Location</a>
+                <a href="#">Instagram Lite</a>
+                <a href="#">contact & Uploading Non-Users</a>
+            </div>
+            <div class="copyright">
+                <select class="language-list">
+                    <option>English</option>
+                    <option>Spanish</option>
+                    <option>French</option>
+                    <option>German</option>
+                    <option>Arabic</option>
+                    <option>Russian</option>
+                    <option>Mandarin</option>
+                    <option>Portuguese</option>
+                    <option>Italian</option>
+                    <option>Japanese</option>
+                    <option>Korean</option>
+                </select>
+                &#169 2022 Instagram from Meta
+            </div>
+        </div>
+    </div>
+    <!-- script -->
+    <scrip src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+    <script>
+        // LOGIN PAGE
+        setInterval(()=>{
+        changeImage();
+        },2000);
+
+        function changeImage() {
+            var images = document
+            .getElementById("slide-content")
+            .getElementsByTagName("img");
+
+            for (i = 0; i < images.length; i++){
+            var image = images[i];
+
+            if(image.classList.contains("active")){
+                // remove active class from this image
+                image.classList.remove("active");
+
+                // if we are at the last image then go back  to the first image
+                if (i == images.length -1){
+                    var nextImage = images[0];
+                    nextImage.classList.add("active");
+                    break;
+                }
+
+                var nextImage = images[i + 1];
+                nextImage.classList.add("active");
+                break;
+            }
+        }
+        }
+
+    </script>
+</body>
+</html>

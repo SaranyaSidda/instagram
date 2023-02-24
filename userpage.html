@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Instagram-Clone</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://kit.fontawesome.com/e1e9fac77f.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./image/icon.png">
+    <style>
+        .navbar{
+            display: none;
+        }
+        @media (max-width : 1100px){
+            .navbar{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 50px;
+                background:#fff ;
+                border-bottom: 1px solid #dfdfdf;
+                display: flex;
+                justify-content: center;
+                padding: 5px 0;
+            }
+        }
+        @media(max-width:480px){
+            .navbar{
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 50px;
+                background:#fff ;
+                border-bottom: 1px solid #dfdfdf;
+                display: flex;
+                justify-content: center;
+                padding: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <img class="brand-logo" src="image/Instagram_logo.png" alt="logo">
+            <form class="search-form">
+                <input type="text" class="serch-box" placeholder="Search..">
+            </form>
+            <div class="nav-items">
+                <i class="icon fa-solid fa-magnifying-glass"></i>
+                <i class="icon fa-solid fa-house-chimney"></i>
+                <i class="icon fa-solid fa-plus"></i>
+                <i class="icon fa-solid fa-heart"></i>
+                <div class="icon user-profile">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Section -->
+    <section class="main">
+        <div class="special-col">
+            <div class="spl-wrapper">
+                <img class="slp-brand-logo" src="image/Instagram_logo.png" alt="logo">
+                <div class="spl-items m-2">
+                    <div>
+                        <button class="btn"><i class="icon fa-solid fa-house-chimney"></i> Home</button>
+                    </div>
+                    <div>
+                        <button class="btn"><i class="icon fa-solid fa-magnifying-glass"></i> search</button>
+                    </div>
+                   <div>
+                        <button class="btn">   <i class="icon fa-solid fa-compass"></i> Explore</button>
+                   </div>
+                    <div>
+                        <button class="btn"><i class="icon fa-brands fa-facebook-messenger"></i> Messages</button>
+                    </div>
+                    <div>
+                        <button class="btn"><i class="icon fa-regular fa-heart"></i> Notifications</button>
+                    </div>
+                    <div>
+                        <button class="btn"><i class="icon fa-regular fa-square-plus "></i> Create</button>
+                    </div>
+                    <div class="spl-profile mt-4 mb-5">
+                       <a style="text-decoration: none;color: #000;" href="profile.html"><button class="btn" style="font-size: 15px;">
+                        <img src="image/status3.jpg">saranya.sidda</button></a>
+                    </div>
+                    <div>
+                        <button class="btn mt-5" style="bottom:80pxx;position: absolute;"><i class="icon fa-solid fa-bars"></i> More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="left-col">
+                <!-- STATUS -->
+                <div class="status-wrapper">
+                    <div class="status-card">
+                        <div class="profile-pic"><img src="image/status1.jpg" alt="userpic"></div>
+                        <p class="username">Jyothi_255</p>
+                    </div>
+                    <div class="status-card">
+                        <div class="profile-pic"><img src="image/statsu2.jpg" alt="userpic"></div>
+                        <p class="username">akhiljuvvala.143</p>
+                    </div>
+                    <div class="status-card">
+                        <div class="profile-pic"><img src="image/status3.jpg" alt="userpic"></div>
+                        <p class="username">sarath</p>
+                    </div>
+                    <div class="status-card">
+                        <div class="profile-pic"><img src="image/status6.jpg" alt="userpic"></div>
+                        <p class="username">veeru143</p>
+                    </div>
+                    <div class="status-card">
+                        <div class="profile-pic"><img src="image/status4.jpg" alt="userpic"></div>
+                        <p class="username">manikantakasulu</p>
+                    </div>
+                    <div class="status-card">
+                        <div class="profile-pic"><img src="image/status5.jpg" alt="userpic"></div>
+                        <p class="username">sureshK</p>
+                    </div>
+                    <div class="status-card">
+                        <div class="profile-pic"><img src="image/statsu2.jpg" alt="userpic"></div>
+                        <p class="username">sai</p>
+                    </div>
+                </div>
+                <!-- POST -->
+                <!-- post 1 -->
+                <div class="post">
+                    <div class="info">
+                        <div class="user">
+                            <div class="profile-pic">
+                                <img src="image/status1.jpg" alt="userpic">
+                            </div>
+                            <p class="username" style="margin-top: 20px;">Jyothi_255</p>
+                        </div>
+                        <i class="fa-solid fa-ellipsis options"></i>
+                    </div>
+                    <img src="image/profile.jpg" class="post-image" alt="post-image">
+                    <div class="post-content">
+                        <div class="reaction-wrapper">
+                            <p class="loveSign"><i class="icon icon-heart fa-regular fa-heart"></i></p>
+                            <p><i class="icon fa-regular fa-comment"></i></p>
+                            <p><i class="icon fa-regular fa-paper-plane"></i></p>
+                            <p class="icon-save-icon"><i class="icon icon-save fa-regular fa-bookmark"></i></p>
+                        </div>
+                        <p class="likes">24 likes </p>
+                        <p class="description">
+                            <span>Jyothi_255</span>Link in Bio & Stories</p>
+                        <p class="post-time">5 MINUTES AGO</p>
+                    </div>
+                    <div class="comment-wrapper">
+                        <img src="image/status3.jpg" class="icon">
+                        <input type="text" class="comment-box"placeholder="Add a comment">
+                        <button class="comment-btn">post</button>
+                    </div>
+                </div>
+                <!-- posty-2 -->
+                <div class="post">
+                    <div class="info">
+                        <div class="user">
+                            <div class="profile-pic">
+                                <img src="image/status4.jpg" alt="userpic">
+                            </div>
+                            <p class="username" style="margin-top: 20px;">akhiljuvvala</p>
+                        </div>
+                        <i class="fa-solid fa-ellipsis options"></i>
+                    </div>
+                    <img src="image/img2.webp" class="post-image" alt="post-image">
+                    <div class="post-content" id="reactionWrapper" >
+                        <div class="reaction-wrapper" >
+                            <p class="loveSign"><i class="icon icon-heart fa-regular fa-heart"></i></p>
+                            <p><i class="icon fa-regular fa-comment"></i></p>
+                            <p><i class=" icon fa-regular fa-paper-plane"></i></p>
+                            <p class="icon-save-icon"><i class="icon icon-save fa-regular fa-bookmark"></i></p>
+                        </div>
+                        <p class="likes">241 likes </p>
+                        <p class="description">
+                            <span>nookaraju.koppireddy</span>Link in Bio & Stories</p>
+                        <p class="post-time">1 HOURS AGO</p>
+                    </div>
+                    <div class="comment-wrapper">
+                        <img src="image/status3.jpg" class="icon">
+                        <input type="text" class="comment-box"placeholder="Add a comment">
+                        <button class="comment-btn">post</button>
+                    </div>
+                </div>
+                <div class="older-card">
+                    <img src="image/olderpost.png" alt="post-image">
+                    <p style="font-size:15px;font-weight: 600; margin-bottom: 0;">You've completely caught up</p>
+                    <p class="username">You've seen all posts from the past 3 days</p>
+                    <a style="text-decoration: none;font-size: 15px;font-weight: 500; margin-bottom: 20px;" href="#">View Older Posts</a>
+                </div>
+                 <!-- suggested posts -->
+                 <div style="text-align:start;margin:10px;font-weight: 700;">
+                    <p>Suggested posts</p>
+                </div>
+                <div class="post">
+                    <div class="info">
+                        <div class="user">
+                            <div class="profile-pic">
+                                <img src="image/status5.jpg" alt="userpic">
+                            </div>
+                            <p class="username" style="margin-top: 20px;">nookaraju_koppireddy</p><button  class="btn requestBtn" id="" style="width: 100px;padding:0;">follow</button>
+                        </div>
+                        <i class="fa-solid fa-ellipsis options"></i>
+                    </div>
+                    <img src="image/img1.jpg" class="post-image" alt="post-image">
+                    <div class="post-content">
+                        <div class="reaction-wrapper">
+                            <p><i class="icon icon-heart fa-regular fa-heart"></i></p>
+                            <p><i class="icon fa-regular fa-comment" id="comment"></i></p>
+                            <p><i class=" icon fa-regular fa-paper-plane"></i></p>
+                            <p class="icon-save-icon"><i class="icon icon-save fa-regular fa-bookmark"></i></p>
+                        </div>
+                        <p class="likes">50 likes </p>
+                        <p class="description">
+                            <span>nookaraju.koppireddy</span>Link in Bio & Stories</p>
+                        <p class="post-time">10 HOURS AGO</p>
+                    </div>
+                    <div class="comment-wrapper">
+                        <img src="image/status3.jpg" class="icon">
+                        <input type="text" class="comment-box"placeholder="Add a comment">
+                        <button class="comment-btn">post</button>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="info">
+                        <div class="user">
+                            <div class="profile-pic">
+                                <img src="image/status5.jpg" alt="userpic">
+                            </div>
+                            <p class="username" style="margin-top: 20px;">ramganesh_v</p><button class="btn requestBtn" id="" style="width: 100px;padding: 0;">follow</button>
+                        </div>
+                        <i class="fa-solid fa-ellipsis options"></i>
+                    </div>
+                    <video class="post-image" style="height: 500px;"controls src="image/WhatsApp Video 2022-12-11 at 2.19.14 PM.mp4"></video>
+                    <div class="post-content">
+                        <div class="reaction-wrapper">
+                            <p><i class="icon icon-heart fa-regular fa-heart"></i></p>
+                            <p><i class="icon fa-regular fa-comment" id="comment"></i></p>
+                            <p><i class=" icon fa-regular fa-paper-plane"></i></p>
+                            <p class="icon-save-icon"><i class="icon icon-save fa-regular fa-bookmark"></i></p>
+                        </div>
+                        <p class="likes">124 likes </p>
+                        <p class="description">
+                            <span>nookaraju.koppireddy</span>Link in Bio & Stories</p>
+                        <p class="post-time">2 DAYS AGO</p>
+                    </div>
+                    <div class="comment-wrapper">
+                        <img src="image/status3.jpg" class="icon">
+                        <input type="text" class="comment-box"placeholder="Add a comment">
+                        <button class="comment-btn">post</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right-col">
+                <!--profile card  -->
+                <div class="profile-card">
+                    <div class="profile-pic">
+                        <img src="image/status3.jpg">
+                    </div>
+                    <div>
+                        <p class="username">saranya.sidda</p>
+                        <p class="sub-text">S A R A N Y A</p>
+                    </div>
+                    <button class="logout-btn"><a href="index.html">logout</a></button>
+                    <a href="#"style="float:inline-end;margin-left:0.5rem;font-size:14px; text-decoration:none" >Switch</a>
+                </div>
+                <!-- suggestions card -->
+                <div class="suggestion-profile">
+                    <p class="suggestions-text">Suggestions For you</p>
+                    <a href="">SeeAll</a>
+                </div>
+                <div class="suggestions-card">
+                    <div class="suggestion-pic">
+                        <img src="image/status1.jpg" alt="suggestion-picture">
+                    </div>
+                    <div>
+                        <p class="username">Username</p>
+                        <p class="sub-text">Suggested for you</p>
+                    </div>
+                    <button class="follow-btn">Follow</button>
+                </div>
+                <div class="suggestions-card">
+                    <div class="suggestion-pic">
+                        <img src="image/status5.jpg" alt="suggestion-picture">
+                    </div>
+                    <div>
+                        <p class="username">Username</p>
+                        <p class="sub-text">New to instagram</p>
+                    </div>
+                    <button class="follow-btn">Follow</button>
+                </div>
+                <div class="suggestions-card">
+                    <div class="suggestion-pic">
+                        <img src="image/status4.jpg" alt="suggestion-picture">
+                    </div>
+                    <div>
+                        <p class="username">Username</p>
+                        <p class="sub-text">Followed by sarath</p>
+                    </div>
+                    <button class="follow-btn">Follow</button>
+                </div>
+                <div class="suggestions-card">
+                    <div class="suggestion-pic">
+                        <img src="image/status3.jpg" alt="suggestion-picture">
+                    </div>
+                    <div>
+                        <p class="username">Username</p>
+                        <p class="sub-text">New to instagram</p>
+                    </div>
+                    <button class="follow-btn">Follow</button>
+                </div>
+                <div class="footer" style="align-items: flex-start;width: 400px; display: flex;flex-direction: column;">
+                    <div class="links" style="text-align: start;justify-content: start;">
+                        <a href="#">About</a>
+                        <a href="#">Help</a>
+                        <a href="#">Press</a>
+                        <a href="#">API</a>
+                        <a href="#">Jobs</a>
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <a href="#">Location</a>
+                        <a href="#">Language</a>
+                    </div>
+                    <div class="copyright">
+                        &#169 2022 Instagram from Meta
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- script -->
+    <scrip src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+    // Request btn
+
+        let requestBtn = document.querySelectorAll(".requestBtn")
+        for(let btn of requestBtn)
+        {
+
+            btn.addEventListener("click",()=>
+            {
+
+                if(btn.textContent === "Requested")
+                {
+                    btn.textContent = "follow"
+                }
+                else{
+                    btn.textContent = "Requested"
+                }
+            })
+        }
+
+    </script>
+</body>
+</html>

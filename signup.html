@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp • Instagram</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://kit.fontawesome.com/e1e9fac77f.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="image/icon.png">
+</head>
+<body>
+    <div class="container">
+        <div class="main-container">
+            <div class="main-content">
+                <div class="form-container">
+                    <div class="form-content box">
+                        <div class="logo">
+                            <img src="image/Instagram_logo.png" alt="logo img" class="logo-img">
+                        </div>
+                        <p style="text-align: center;font-size: 18px;margin: 30px 10px 10px 30px;font-weight: 600;color: #a5a5a5;">Sign up to see photos and videos from your friends.</p>
+                        <div class="btn-group">
+                            <button class="login-btn" id="login-btn" type="submit"><i class="fa-brands fa-square-facebook fb"> </i> Login with Facebook</button>
+                        </div>
+                        <div class="or">
+                            <hr>
+                            <span>OR</span>
+                            <hr>
+                        </div>
+                        <form class="login-form" id="login-form">
+                            <div class="form-group">
+                                <div class="login-input">
+                                    <input type="tel"placeholder="Phone Number or Email" required>
+                                </div>
+                            </div>
+                                <div class="form-group">
+                                    <div class="login-input">
+                                        <input type="text"placeholder="Full Name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="login-input">
+                                        <input type="email"placeholder="Username" required>
+                                    </div>
+                                </div>
+                            <div class="form-group">
+                                <div class="login-input">
+                                    <input type="password"placeholder="Password" id="password" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="login-input">
+                                    <input type="password"placeholder="Confirm Password" id="password_confirm" required>
+                                </div>
+                                <p class="text-center text-danger" style="font-size: 13px;" id="error_message"></p>
+                            </div>
+                            <div>
+                                <p class="text-center alert" style="font-size: 13px; padding:20px;padding-bottom: 0 ;">People who use our service may have uploaded your contact information to Instagram. <a style="text-decoration: none; color: #a5a5a5;" href="">Learn More</a></p>
+                                <p class="text-center alert-danger"
+                                style="font-size: 13px; padding:20px;padding-top: 0;padding-bottom: 5px;">By signing up, you agree to our
+                                <a style="text-decoration: none;color: #a5a5a5"href="">Terms</a>,
+                                <a style="text-decoration: none;color: #a5a5a5" href=""> Privacy Policy and Cookies Policy</a>.</p>
+                            </div>
+                            <div class="btn-group">
+                                <button class="login-btn" id="signup-btn" type="submit">SignUp</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="goto">
+                        <p>Have an account? <a href="index.html" target="_self">Log in</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="links" id="link">
+                <a href="#">Meta</a>
+                <a href="#">About</a>
+                <a href="#">Blog</a>
+                <a href="#">Jobs</a>
+                <a href="#">Help</a>
+                <a href="#">API</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Top Accounts</a>
+                <a href="#">Hashtags</a>
+                <a href="#">Location</a>
+                <a href="#">Instagram Lite</a>
+                <a href="#">contact & Uploading Non-Users</a>
+            </div>
+            <div class="copyright">
+                <select class="language-list">
+                    <option>English</option>
+                    <option>Spanish</option>
+                    <option>French</option>
+                    <option>German</option>
+                    <option>Arabic</option>
+                    <option>Russian</option>
+                    <option>Mandarin</option>
+                    <option>Portuguese</option>
+                    <option>Italian</option>
+                    <option>Japanese</option>
+                    <option>Korean</option>
+                </select>
+                &#169 2022 Instagram from Meta
+            </div>
+        </div>
+    </div>
+    <!-- script -->
+    <scrip src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+    // SIGN UP
+
+        function verifyForm(){
+            var password = document.getElementById("password").value;
+            var passwordConfirm = document.getElementById("password_confirm").value;
+            var errorMessage = document.getElementById("error_message");
+
+            if(password == ""){
+                errorMessage.innerHTML="Please enter password....";
+                return  false;
+            }
+            // if(password<  6){
+            //     errorMessage.innerHTML="Password is too short";
+            //     return  false;
+            // }
+            if(password != passwordConfirm){
+                errorMessage.innerHTML="Password Don't match....";
+                return  false;
+            }
+            return true;
+
+        }
+            document.getElementById("signup-btn").addEventListener("click",(e)=>{
+                e.preventDefault();
+
+                verifyForm();
+            })
+    </script>
+
+</body>
+</html>
